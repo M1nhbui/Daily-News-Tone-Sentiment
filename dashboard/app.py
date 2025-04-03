@@ -23,7 +23,7 @@ st.write("Displaying sentiment analysis of news articles.")
 
 # Show latest 10 rows from the database
 st.subheader("Latest News Articles")
-st.dataframe(df.head(10))
+st.dataframe(df.head(25))
 
 # Create a tone distribution chart using Altair
 st.subheader("Tone Distribution")
