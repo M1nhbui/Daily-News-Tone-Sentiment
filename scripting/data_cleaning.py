@@ -39,13 +39,13 @@ def process_articles(articles):
     for article in articles:
         title = article.get('title', '')
         description = article.get('description', '')
+        content = article.get('content', '')
         processed_articles.append({
             'title': title,
             'description': description,
-            'clean_title': clean_text(title),
-            'clean_description': clean_text(description),
             'publishedAt': article.get('publishedAt', ''),
-            'source': article.get('source', {}).get('name', '')
+            'source': article.get('source', {}).get('name', ''),
+            'content': clean_text(content)
         })
     return pd.DataFrame(processed_articles)
 

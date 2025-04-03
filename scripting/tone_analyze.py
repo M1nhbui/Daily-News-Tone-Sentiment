@@ -19,7 +19,7 @@ def classify_articles(input_csv):
     with open(input_csv, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            text = row.get('clean_title', '')
+            text = row.get('content', '')
             row['tone'] = predict_tone(text)
             processed_articles.append(row)
     return processed_articles
