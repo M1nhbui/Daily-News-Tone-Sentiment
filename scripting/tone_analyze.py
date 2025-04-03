@@ -2,13 +2,16 @@ import csv
 import pickle
 import numpy as np
 
-with open('train_model/prebuild_model.pkl', 'rb') as f:
+used_model = 'self_model.pkl'
+with open('train_model/' + used_model, 'rb') as f:
     model = pickle.load(f)
 
 def predict_tone(text):
     if not isinstance(text, str):
         text = str(text)
     prediction = model.predict([text])
+    if (used_model == 'prebuild_model.pkl'):
+        return prediction[0]['label']
     return prediction[0]
 
 def classify_articles(input_csv):
