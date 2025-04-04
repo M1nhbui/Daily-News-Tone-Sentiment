@@ -4,3 +4,4 @@ train_test_data/
 .env
 *.pkl
 data/
+dags/
