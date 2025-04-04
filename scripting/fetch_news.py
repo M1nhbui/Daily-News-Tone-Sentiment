@@ -10,7 +10,7 @@ API_KEY = os.getenv("NEWS_API_KEY")
 
 newsapi = NewsApiClient(API_KEY)
 
-def fetch_news() :
+def fetch_newsAPI() :
     top_headlines = newsapi.get_top_headlines(country="us", page_size=100)
     articles = top_headlines['articles']
 
@@ -32,4 +32,4 @@ def fetch_news() :
     return articles
 
 if __name__ == "__main__":
-    fetch_news()
+    fetch_newsAPI()
