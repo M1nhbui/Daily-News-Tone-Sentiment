@@ -37,3 +37,4 @@ def save_to_csv():
     
 if __name__ == "__main__":
     save_to_csv()
+    print("Data successfully stored in CSV!")
