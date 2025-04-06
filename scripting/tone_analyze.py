@@ -2,7 +2,7 @@ import csv
 import pickle
 import numpy as np
 
-used_model = 'self_model.pkl'
+used_model = 'prebuild_model.pkl'
 with open('train_model/' + used_model, 'rb') as f:
     model = pickle.load(f)
 
